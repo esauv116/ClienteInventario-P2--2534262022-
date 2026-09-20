@@ -296,14 +296,74 @@ git push origin main
 
 ## Parcial 2 — Consumo de API (completar por el estudiante)
 
-**Nombre:** _________________________________ · **Carnet:** ______________
+**Nombre:*Abner esau vasquez Diaz*· **Carnet:** 2534262022
 
 ### Salida de consola (segunda ejecución)
 
 ```
-(pegue aquí la salida completa de la segunda ejecución de Main)
+(--- Inventario inicial ---
+ID    PRODUCTO                    CANTIDAD
+1     Essence Mascara Lash Princess         99
+2     Eyeshadow Palette with Mirror         34
+3     Powder Canister                   89
+4     Red Lipstick                      91
+5     Red Nail Polish                   79
+6     Calvin Klein CK One               29
+7     Chanel Coco Noir Eau De           58
+8     Dior J'adore                      98
+9     Dolce Shine Eau de                 4
+10    Gucci Bloom Eau de                91
+
+Respaldo generado en inventario.json
+Producto 2 actualizado.
+Producto 1 eliminado.
+
+--- Despues de los cambios ---
+ID    PRODUCTO                    CANTIDAD
+2     Monitor 24 pulgadas               12
+3     Powder Canister                   89
+4     Red Lipstick                      91
+5     Red Nail Polish                   79
+6     Calvin Klein CK One               29
+7     Chanel Coco Noir Eau De           58
+8     Dior J'adore                      98
+9     Dolce Shine Eau de                 4
+10    Gucci Bloom Eau de                91
+
+Registros restaurados desde JSON: 1
+
+--- Inventario final ---
+ID    PRODUCTO                    CANTIDAD
+1     Essence Mascara Lash Princess         99
+2     Monitor 24 pulgadas               12
+3     Powder Canister                   89
+4     Red Lipstick                      91
+5     Red Nail Polish                   79
+6     Calvin Klein CK One               29
+7     Chanel Coco Noir Eau De           58
+8     Dior J'adore                      98
+9     Dolce Shine Eau de                 4
+10    Gucci Bloom Eau de                91
+
+Sincronizacion con la API -> insertados: 0 | actualizados: 10
+
+--- Inventario sincronizado ---
+ID    PRODUCTO                    CANTIDAD
+1     Essence Mascara Lash Princess         99
+2     Eyeshadow Palette with Mirror         34
+3     Powder Canister                   89
+4     Red Lipstick                      91
+5     Red Nail Polish                   79
+6     Calvin Klein CK One               29
+7     Chanel Coco Noir Eau De           58
+8     Dior J'adore                      98
+9     Dolce Shine Eau de                 4
+10    Gucci Bloom Eau de                91
+
+Process finished with exit code 0)
 ```
 
 ### Uso de inteligencia artificial
 
-(Declare si utilizó alguna herramienta de IA, cuál y para qué. Si no la utilizó, indíquelo.)
+si se uso IA como un apoyo para entender mejor las instruciones y entender los errores de que me daba el git y las conxiones y los errores de dedo, use a gemini 
+de google por el echo de tener la cuenta de la u y siento que explica bien 
