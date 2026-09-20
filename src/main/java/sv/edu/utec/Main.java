@@ -3,6 +3,7 @@ package sv.edu.utec;
 import sv.edu.utec.datos.ProductoDAO;
 import sv.edu.utec.modelo.Producto;
 import sv.edu.utec.servicio.InventarioJsonService;
+import sv.edu.utec.servicio.ClienteProveedorApi;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -46,6 +47,12 @@ public class Main {
 
             System.out.println("\n--- Inventario final ---");
             imprimir(dao.listar());
+
+            // 5. Consumo de la API del Proveedor (Enunciado 3)
+            System.out.println("\n--- Productos consumidos de la API ---");
+            ClienteProveedorApi clienteApi = new ClienteProveedorApi();
+            List<Producto> productosApi = clienteApi.obtenerProductosProveedor();
+            imprimir(productosApi);
 
         } catch (SQLException e) {
             System.out.println("Error de base de datos: " + e.getMessage());
