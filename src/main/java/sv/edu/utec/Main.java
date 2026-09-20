@@ -48,17 +48,22 @@ public class Main {
             System.out.println("\n--- Inventario final ---");
             imprimir(dao.listar());
 
-            // 5. Consumo de la API del Proveedor (Enunciado 3)
-            System.out.println("\n--- Productos consumidos de la API ---");
+
+            // 5. Sincronización con la API (Enunciado 4)
             ClienteProveedorApi clienteApi = new ClienteProveedorApi();
-            List<Producto> productosApi = clienteApi.obtenerProductosProveedor();
-            imprimir(productosApi);
+            String resumen = clienteApi.sincronizar(10);
+            System.out.println("\nSincronizacion con la API -> " + resumen);
+            System.out.println("\n--- Inventario sincronizado ---");
+            imprimir(dao.listar());
 
         } catch (SQLException e) {
             System.out.println("Error de base de datos: " + e.getMessage());
         } catch (IOException e) {
             System.out.println("Error al leer o escribir el archivo JSON: " + e.getMessage());
+        }catch (InterruptedException e) {
+            System.out.println("Error en la comunicacion con la API: " + e.getMessage());
         }
+
     }
 
     // Inserta solo lo que aun no existe: el programa es re-ejecutable
