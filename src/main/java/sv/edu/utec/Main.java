@@ -3,7 +3,8 @@ package sv.edu.utec;
 import sv.edu.utec.datos.ProductoDAO;
 import sv.edu.utec.modelo.Producto;
 import sv.edu.utec.servicio.InventarioJsonService;
-import sv.edu.utec.servicio.ClienteProveedorApi;
+import sv.edu.utec.api.ProveedorAPI;
+import sv.edu.utec.servicio.SincronizacionService;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -50,9 +51,11 @@ public class Main {
 
 
             // 5. Sincronización con la API (Enunciado 4)
-            ClienteProveedorApi clienteApi = new ClienteProveedorApi();
-            String resumen = clienteApi.sincronizar(10);
+            ProveedorAPI proveedorApi = new ProveedorAPI();
+            SincronizacionService sincronizacionService = new SincronizacionService(proveedorApi, dao);
+            String resumen = sincronizacionService.sincronizar(10);
             System.out.println("\nSincronizacion con la API -> " + resumen);
+
             System.out.println("\n--- Inventario sincronizado ---");
             imprimir(dao.listar());
 
